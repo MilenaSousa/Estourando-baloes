@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Estourando balões</title>
+
+		<script language='Javascript'>
+
+			function escolha(){
+				var e = document.getElementById('nivel').value;
+
+				switch(e){
+					case '1':
+						document.body.style.backgroundColor = "green";
+						document.getElementById('msg').innerHTML = "Você tem 120 segundos";
+					break;
+
+					case '2':
+						document.body.style.backgroundColor = "yellow";
+						document.getElementById('msg').innerHTML = "Você tem 60 segundos";
+					break;
+
+					case '3':
+						document.body.style.backgroundColor = "red";
+						document.getElementById('msg').innerHTML = "Você tem 30 segundos";
+					break;
+
+					default:
+					alert('opcao invalida');
+					return false
+				}
+			}
+
+			function iniciarJogo(){
+
+				var nivel = document.getElementById('nivel').value;
+
+				window.location.href = 'jogo.html?' + nivel;
+
+			}
+			
+		</script>
+	</head>
+
+	<body>
+
+		<div style="text-align: center; margin: 155px;">
+			<div id=msg style="font-weight: bold; font-size: 50px; color: #fff;"></div>
+			<p style="font-size: 30px;">Nível: 
+				<select style="font-size: 24px;" id="nivel" onchange="escolha()">
+					<option>-------</option>
+					<option value="1">Fácil</option>
+					<option value="2">Médio</option>
+					<option value="3">Difícil</option>
+				</select>
+			</p>
+
+			<img src="imagens/iniciar.png" onclick="iniciarJogo()">
+		</div>
+
+	</body>
+	
+</html>

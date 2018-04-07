@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Estourando balões</title>
+		<script src="jogo.js"></script>
+
+	</head>
+
+	<body onload="iniciarJogo()"><!-- Assim que o jogo for iniciado essa função sera chamada-->
+
+		<div style="float: left; width: auto; height: 500px; background-color: #fff; border: solid 1px pink;">
+			
+			<!-- Nº total de balões -->
+			<table border="0">
+				<tr>
+					<td>
+						<img src="imagens/balao_azul_grande.png">
+					</td>
+					<td style="padding: 7px;"> 
+						<span style="font-size: 25px; color: red;" id="baloes_inteiros"></span> 
+					</td> 
+				</tr>
+			</table>
+
+			<br>
+
+			<!-- Nº de balões estourados -->
+			<table border="0">
+				<tr>
+					<td>
+						<img src="imagens/balao_azul_grande_estourado.png">
+					</td>
+					<td style="padding: 5px;">
+						<span style="font-size: 25px; color: red;" id="baloes_estourados"></span> 
+					</td> 
+				</tr>
+			</table>
+
+			<br>
+
+			<!-- CRONOMETRO -->
+			<table border="0" style="height: 132px; width: 140px; background: url(imagens/cronometro.png);">
+				<tr style="text-align: center;">
+					<td style="font-size: 20px; color: red;"><span id="cronometro"></span></td> 
+				</tr>
+			</table>
+		</div>
+
+		<div id="cenario" style="overflow: hidden; text-align: center; width: 600px; height: 500px; float: left; background: url(imagens/cenario.png); background-size: cover; background-position: bottom;">
+			
+		</div>
+
+	</body>
+	
+</html>
